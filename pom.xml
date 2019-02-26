@@ -5,15 +5,15 @@
 
     <parent>
         <groupId>com.funtl</groupId>
-        <artifactId>hello-spring-cloud-dependencies</artifactId>
+        <artifactId>itoken-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>
+        <relativePath>../itoken-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-admin</artifactId>
+    <artifactId>itoken-admin</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-admin</name>
+    <name>itoken-admin</name>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
@@ -40,15 +40,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.jolokia</groupId>
-            <artifactId>jolokia-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-server</artifactId>
-        </dependency>
         <!-- Spring Boot End -->
 
         <!-- Spring Cloud Begin -->
@@ -58,9 +49,24 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
         <!-- Spring Cloud End -->
+
+        <!-- Spring Boot Admin Begin -->
+        <dependency>
+            <groupId>org.jolokia</groupId>
+            <artifactId>jolokia-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+        </dependency>
+        <!-- Spring Boot Admin End -->
     </dependencies>
 
     <build>
@@ -69,7 +75,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.hello.spring.cloud.admin.AdminApplication</mainClass>
+                    <mainClass>com.funtl.itoken.admin.AdminApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
